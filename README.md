@@ -14,7 +14,7 @@ The solution to store custom modules.
 
 ## Hub's filesystem
 
-How to navigate through the Hub's file system.
+How to navigate through the Hub's file system. Custom implementation of the walk() function.
 
 ## Two digits font for 5x5 light matrix
 
@@ -26,7 +26,7 @@ How to use gestures with callable functions.
 
 ## Select value on the Hub
 
-Solution to select value from the Hub.
+The solution to select a value from the Hub.
 
 ## Which data can be read from the .slots file?
 
