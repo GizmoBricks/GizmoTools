@@ -44,5 +44,8 @@ It has been tested with the SPIKE Legacy and Mindstorms.
 > To verify the Stored File:
 >   - Press 'Open Hub connections' and choose the 'Programs' tab. 
 >   Wait until the program appears in the respective slot's line. 
->   ![]()
+>   ![Verifying data uploading](https://github.com/GizmoBricks/GizmoTools/assets/127412675/1d721298-b699-45c5-a652-c8d5498e4ec3)
+
+
+https://github.com/GizmoBricks/GizmoTools/blob/8e8aac657a37cfd664ba9a2870d7c1d6bb87e261/DataFileHandling/Mindstorms_SpikeLegacy/Basic/data_reading.py#L1-L5
 
