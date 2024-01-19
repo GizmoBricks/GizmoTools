@@ -9,6 +9,40 @@ It has been tested with the SPIKE Legacy and Mindstorms.
 > [Here](https://github.com/GizmoBricks/GizmoTools/tree/main/DataFileHandling/Spike_3) 
 > is a solution for Spike 3.
 
+# Technical details
+
+If you are interested in technical details about this solution:
+
+# An "exploit"
+
+If a project doesn't contain any Syntax Errors, 
+it will be precompiled by the app into a MicroPython `.mpy` file 
+and stored in the Hub.
+
+A MicroPython file is a binary file. 
+More importantly, as it's a pre-compiled file, its content will differ from the original file.
+
+However, if a project contains any Syntax Errors, 
+it'll be stored in the Hub as a regular Python `.py` file, essentially a text file.
+Text files are easily navigable using Python.
+Usually, a file with some data contains a lot of Syntax Errors from the Python perspective.
+
+This method capitalizes on this “exploit”.
+
+## Project Storage in the Hub
+
+All projects reside in the `/projects/` directory, each having its own directory. 
+These directories are labeled with specific digits, acting as unique IDs. All these IDs are recorded in the `/projects/.slots` file.
+
+The full path to a project file looks like this: 
+`/projects/{ID}/__init__.mpy` for SyntaxError-free files
+or `/projects/{ID}/__init__.py` for files with any SyntaxErrors.
+
+> [!IMPORTANT]
+> The ID of each project changes every time you run or upload the program from the app.
+> However, this ID remains unchanged if you run the program directly from the Hub.
+   
+
 # Uploading Data Files to the Hub
 
 > [!CAUTION]
@@ -44,9 +78,11 @@ It has been tested with the SPIKE Legacy and Mindstorms.
 >
 > <details>
 >
->   <summary>Example of SyntaxError message:</summary>
+> <summary>Example of SyntaxError message:</summary>
 >
->  ![SyntaxError with the path to a data file](https://github.com/GizmoBricks/GizmoTools/assets/127412675/298d6b39-317c-49d6-a857-1ef35ddfb2ec)
+> ![SyntaxError with the path to a data file](https://github.com/GizmoBricks/GizmoTools/assets/127412675/298d6b39-317c-49d6-a857-1ef35ddfb2ec)
+>   
+> `8040` is ID in this case.
 > 
 > </details>
 
@@ -66,45 +102,6 @@ It has been tested with the SPIKE Legacy and Mindstorms.
 >
 >  </details>
 
-
-# Technical details
-
-If you are interested in technical details about this solution:
-
-<details>
-
-## An "exploit"
-
-If a project doesn't contain any Syntax Errors, 
-it will be precompiled by the app into a MicroPython `.mpy` file 
-and stored in the Hub.
-
-A MicroPython file is a binary file. 
-More importantly, as it's a pre-compiled file, its content will differ from the original file.
-
-
-However, if a project contains any Syntax Errors, 
-it'll be stored in the Hub as a regular Python `.py` file, essentially a text file.
-Text files are easily navigable using Python.
-Usually, a file with some data contains a lot of Syntax Errors from the Python perspective.
-
-This method capitalizes on this “exploit”.
-
-## Project Storage in the Hub
-
-All projects reside in the `/projects/` directory, each having its own directory. 
-These directories are labeled with specific digits, acting as unique IDs. All these IDs are recorded in the `/projects/.slots` file.
-
-The full path to a project file looks like this: 
-`/projects/{ID}/__init__.mpy` for SyntaxError-free files
-or `/projects/{ID}/__init__.py` for files with any SyntaxErrors.
-
-> [!IMPORTANT]
-> The ID of each project changes every time you run or upload the program from the app.
-> However, this ID remains unchanged if you run the program directly from the Hub.
-   
-</details>
-
 # Reading data from the uploaded file
 
 ## Basic solution
@@ -115,4 +112,5 @@ or `/projects/{ID}/__init__.py` for files with any SyntaxErrors.
    https://github.com/GizmoBricks/GizmoTools/blob/8d730b13015e52b1415f72900c7f04436530aede/DataFileHandling/Mindstorms_SpikeLegacy/slot_0#L1-L3
 2. Copy an ID from the SyntaxError and put it into the following code. Run the code.
    https://github.com/GizmoBricks/GizmoTools/blob/8e8aac657a37cfd664ba9a2870d7c1d6bb87e261/DataFileHandling/Mindstorms_SpikeLegacy/Basic/data_reading.py#L1-L5
-3. Adapt code to your needs if necessary.
+4. Adapt code to your needs if necessary.
+
