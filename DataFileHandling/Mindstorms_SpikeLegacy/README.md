@@ -11,11 +11,21 @@ It has been tested with the SPIKE Legacy and Mindstorms.
 
 # Uploading Data Files to the Hub
 
+> [!CAUTION]
+> Do not disconnect the hub during file uploading to avoid data loss.
+>
+> During the file uploading process, the hub might not respond to any actions.
+
+> [!NOTE]
+> Larger data files might take some time to upload, up to several minutes in some cases.
+
 1.	Create a Python Project with the MINDSTORMS or SPIKE Legacy apps.
 2.	Delete any existing data within the Project.
 3.	Input or paste your data.
-4.	Select a slot and run or upload the Project. 
-    ![Creating and uploading a data file](https://github.com/GizmoBricks/GizmoTools/assets/127412675/50f04bb9-b5eb-487d-be5d-3f020b1b9eea)
+4.	Select a slot and run or upload the Project.
+    *  Now you can use the path from the third line of the SyntaxError to read data.
+
+![Creating and uploading a data file](https://github.com/GizmoBricks/GizmoTools/assets/127412675/50f04bb9-b5eb-487d-be5d-3f020b1b9eea)
 
 
 > [!NOTE]
@@ -24,7 +34,8 @@ It has been tested with the SPIKE Legacy and Mindstorms.
 > Also, the app console returns _a SyntaxError with the full path to the uploaded data file_.
 >
 > SyntaxError in this case is normal and the file will be stored on the hub.
-> ![]()
+> ![SyntaxError with the path to a data file](https://github.com/GizmoBricks/GizmoTools/assets/127412675/298d6b39-317c-49d6-a857-1ef35ddfb2ec)
+
 
 >[!IMPORTANT]
 > If you choose to press "Upload", the app does not show any notification, when upload will be done.
@@ -34,11 +45,4 @@ It has been tested with the SPIKE Legacy and Mindstorms.
 >   - Press 'Open Hub connections' and choose the 'Programs' tab. 
 >   Wait until the program appears in the respective slot's line. 
 >   ![]()
-  
-> [!CAUTION]
-> Do not disconnect the hub during file uploading to avoid data loss.
->
-> During the file uploading process, the hub might not respond to any actions.
 
-> [!NOTE]
-> Larger data files might take some time to upload, up to several minutes in some cases.
