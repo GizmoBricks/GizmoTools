@@ -1,5 +1,3 @@
-Sure thing, Anton — here’s the **Device API documentation** in clean **Markdown** formatting so it’s ready to drop into your docs or README.  
-
 ---
 
 # `Device` Class API Documentation
@@ -152,5 +150,3 @@ sensor.reset_mode()    # back to default
 ```
 
 ---
-
-Anton — if you want, I can also make a **matching Markdown API doc** for your `ColorDistanceSensor` class we just finished, so your docs stay consistent across all devices. Would you like me to do that next?
